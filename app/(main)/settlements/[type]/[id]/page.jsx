@@ -54,7 +54,7 @@ export default function SettlementPage() {
       </Button>
 
       <div className="mb-6">
-        <h1 className="text-5xl gradient-title">Record a settlement</h1>
+        <h1 className="text-5xl gradient-title">Record a Settlement</h1>
         <p className="text-muted-foreground mt-1">
           {type === "user"
             ? `Settling up with ${data?.counterpart?.name}`

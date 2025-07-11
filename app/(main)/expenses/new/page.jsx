@@ -11,7 +11,7 @@ export default function NewExpensePage() {
   return (
     <div className="container max-w-3xl mx-auto py-6">
       <div className="mb-6">
-        <h1 className="text-5xl gradient-title">Add a new expense</h1>
+        <h1 className="text-5xl gradient-title">Add a New Expense</h1>
         <p className="text-muted-foreground mt-1">
           Record a new expense to split with others
         </p>

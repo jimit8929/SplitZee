@@ -25,7 +25,7 @@ const Header = () => {
       <nav className="container mx-auto px-8 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/logos/Logo.png"
+            src="/logos/Icon-Logo.png"
             alt="SplitZee logo"
             height={44} // Use only height for consistent scaling
             width={44}
