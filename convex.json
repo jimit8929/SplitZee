@@ -1,0 +1,7 @@
+{
+  "outboundHttp": {
+    "allowedHosts": [
+      "api.resend.com"
+    ]
+  }
+}
