@@ -5,7 +5,7 @@
 SplitZee is a full-stack expense splitting application that revolutionizes how you manage shared expenses with friends and groups. With intelligent debt simplification, real-time updates, and AI-powered insights, splitting bills has never been easier or smarter.
 
 ## 🔗 Links
-- [Live Demo](https://splitzee.vercel.app) *(Coming Soon)*
+- [Live Demo](https://splitzee.vercel.app)
 
 
 ![SplitZee Banner](public/logos/Project_Banner.png)
