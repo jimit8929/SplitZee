@@ -1,0 +1,7 @@
+{
+  "$schema": "https://inngest.com/schema/inngest.config.schema.json",
+  "functions": "./lib/inngest",
+  "app": {
+    "url": "https://splitzee.vercel.app/api/inngest"
+  }
+}

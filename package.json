@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+     "deploy-inngest": "inngest deploy --app-url=https://splitzee.vercel.app/api/inngest"
   },
   "dependencies": {
     "@clerk/nextjs": "^6.24.0",
@@ -51,6 +52,7 @@
     "convex": "^1.25.2",
     "eslint": "^9",
     "eslint-config-next": "15.3.5",
+    "inngest-cli": "^1.8.2",
     "tailwindcss": "^4",
     "tw-animate-css": "^1.3.5",
     "typescript": "^5"
