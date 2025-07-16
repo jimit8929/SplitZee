@@ -11,7 +11,8 @@ const Footer = () => {
         <ul className="flex flex-wrap items-center p-2">
             {SOCIAL_LINKS.map(({href , label},index) => (
                 <li className="flex items-center" key={index}>
-                    <a href={href} className="text-2xl text-black hover:text-green-800 hover:scale-110 transition-all duration-300 font-bold" target="_blank">
+                    <a href={href} className="text-2xl text-black hover:text-green-800 hover:scale-110 transition-all duration-300 font-bold
+                    dark:text-white" target="_blank">
                         {label}
                     </a>
 

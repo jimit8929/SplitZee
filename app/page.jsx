@@ -8,9 +8,22 @@ import { FEATURES, STEPS } from "@/lib/landing";
 import { ArrowRight } from "lucide-react";
 // import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
+
+import Lenis from "lenis";
 
 const Home = () => {
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
+
   return (
     <div className="flex flex-col pt-16">
       <section className="mt-20 pb-12 space-y-10 md:space-y-20 px-5">
@@ -38,7 +51,7 @@ const Home = () => {
             <Button
               asChild
               size={"lg"}
-              className="bg-green-600 hover:bg-green-700 border-none"
+              className="bg-green-600 hover:bg-green-700 dark:text-white border-none"
             >
               <Link href="/dashboard">
                 Get Started
@@ -56,22 +69,13 @@ const Home = () => {
             </Button>
           </div>
         </div>
-
-        {/* <div className="container mx-auto max-w-5xl overflow-hidden rounded-xl shadow-xl">
-          <div className="gradient p-1">
-            <Image
-              src="/logos/Banner.png"
-              alt="SplitZee Banner"
-              width={1300}
-              height={600}
-              className="rounded-lg mx-auto"
-              priority
-            />
-          </div>
-        </div> */}
       </section>
 
-      <section className="bg-gray-50 py-20" id="features">
+      <section
+        className="bg-gray-50 py-20 text-gray-900 
+    dark:bg-background dark:text-foreground "
+        id="features"
+      >
         <div className="container mx-auto px-4 md:px-6 text-center">
           <Badge
             className="bg-green-100 text-green-700 font-bold"
@@ -84,7 +88,7 @@ const Home = () => {
             Everything you need to split expenses
           </h2>
 
-          <p className="mx-auto mt-3 max-w-[700px] text-gray-500 md:text-xl/relaxed">
+          <p className="mx-auto mt-3 max-w-[700px] text-gray-500 md:text-xl/relaxed dark:text-muted-foreground">
             Our platform provides all the tools you need to handle expenses with
             ease.
           </p>
@@ -140,8 +144,11 @@ const Home = () => {
         </div>
       </section>
 
-
-      <section className="py-20 gradient">
+      <section
+        className="py-20 gradient text-white dark:bg-none
+    dark:bg-[var(--background)] 
+    dark:text-foreground"
+      >
         <div className="container mx-auto px-4 md:px-6 text-center space-y-6">
           <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl text-white">
             Ready to Simplify expense sharing?
@@ -150,11 +157,11 @@ const Home = () => {
             Become part of a thriving community making expense splitting
             effortless and worry-free.
           </p>
-      
+
           <Button
             asChild
             size={"lg"}
-            className="border-green-600 text-white"
+            className="bg-green-600 hover:bg-green-700 dark:text-white border-none"
           >
             <Link href="/dashboard">
               Get Started
@@ -163,9 +170,8 @@ const Home = () => {
           </Button>
         </div>
       </section>
-    
 
-      <Footer/>
+      <Footer />
     </div>
   );
 };
